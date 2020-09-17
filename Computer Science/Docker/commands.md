@@ -1,0 +1,3 @@
+"test": "(docker rm --force documentapp_lambda_test || true && docker-compose -f docker-compose.test.yml up --build -d --force-recreate && docker container exec documentapp_lambda_test npm run test:all",
+
+"test": "docker rm --force documentapp_lambda_test || true && docker-compose -f docker-compose.test.yml up --build -d --force-recreate && docker container exec documentapp_lambda_test npm run test:all",

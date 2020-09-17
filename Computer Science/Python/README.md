@@ -4,13 +4,9 @@
 
 ## Other
 
+http://aosabook.org/en/index.html
+
 https://learnpythonthehardway.org/python3/
-
-Fluent Python: Clear, Concise, and Effective Programming
-Skips the basics, goes directly to examples.
-$53
-
-http://aosabook.org/en/buy.html#fh
 
 https://books.goalkicker.com/PythonBook/
 
@@ -33,3 +29,13 @@ https://github.com/joaoventura/full-speed-python
 https://github.com/MTrajK/coding-problems
 https://github.com/TheAlgorithms/Python
 https://github.com/jerry-git/learn-python3
+
+## Python profiling
+
+https://pythonspeed.com/
+
+## Python compiler/interpreter
+
+https://realpython.com/products/cpython-internals-book/?utm_source=rpads&utm_medium=banner&utm_campaign=house_sq2
+https://github.com/PyCQA/pylint
+https://github.com/PyCQA/astroid

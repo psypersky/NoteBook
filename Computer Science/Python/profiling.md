@@ -90,3 +90,7 @@ Use cProfile if you need a custom profiler
 ## TODO
 
 - Slides has some extra useful links
+
+https://docs.python.org/3/library/debug.html
+
+https://docs.python.org/3/library/profile.html
