@@ -2,6 +2,10 @@
 
 - [ ] Fluent Python
 
+## Flask
+
+https://github.com/cookiecutter-flask/cookiecutter-flask
+
 ## Other
 
 http://aosabook.org/en/index.html

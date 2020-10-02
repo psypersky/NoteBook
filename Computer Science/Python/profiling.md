@@ -67,6 +67,12 @@ It uses real world time instead of cpu time which includes network time, io, etc
 
 It hides library calls by default allowing you to focus on your app code.
 
+## py-spy
+
+Super fast sampling profiler written in Rust that runs in a different process
+
+Looks like it has too much noise compared to pyinstrument
+
 ## Eliot
 
 Allows you to inspect the time, input and output of functions that you suspect are taking too long.
@@ -81,6 +87,12 @@ Always add logging
 Use pyisntrument as default profiler
 Use cProfile if you need a custom profiler
 
+## All profilers
+
+https://github.com/itamarst/eliot
+https://github.com/joerick/pyinstrument
+https://github.com/benfred/py-spy
+
 ## Sources
 
 [Beyond cProfile: performance optimization with sampling profilers and logging](https://www.youtube.com/watch?v=fOzVTPOWfQs)
@@ -88,6 +100,10 @@ Use cProfile if you need a custom profiler
 [slides](https://pythonspeed.com/pygotham19/slides)
 
 ## TODO
+
+https://medium.com/@antoniomdk1/hpc-with-python-part-1-profiling-1dda4d172cdf
+
+https://medium.com/pinterest-engineering/api-profiling-at-pinterest-6fa9333b4961
 
 - Slides has some extra useful links
 
