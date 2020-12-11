@@ -9,6 +9,9 @@ docker-compose up
 docker exec -it postgre-database-container bash
 
 psql -h localhost -p 5432 -U test_user test_database
+
+git log --pretty=oneline
+git push origin f61b48cb8b1877721e2596a6aa65648a68bb605e:master 
 ```
 
 todo:
@@ -17,9 +20,9 @@ todo:
 - [x] Setup postgres in docker
 - [x] Setup docker-compose
 - [x] Setup postgre client in Flask in a naive way
-- [ ] fix fixed-data step in database
-- [ ] seed data in postgre
-- [ ] do something that involves reading from db and processing data
+- [x] fix fixed-data step in database
+- [x] seed data in postgre
+- [x] do something simple that involves reading from db and processing data
 - [ ] Setup loadimpact/k6 in Docker
 - [ ] Load balance the flask debug server
 - [ ] make something fail by excess load
