@@ -18,7 +18,4 @@ RUN chmod 755 /docker-entrypoint-initdb.d/4-add-fixed-data.sh
 ADD fixed-data.sql /usr
 RUN chmod 755 /usr/fixed-data.sql
 
-# ADD 5-add-dev-data.sh /docker-entrypoint-initdb.d/5-add-dev-data.sh
-# RUN chmod 755 /docker-entrypoint-initdb.d/5-add-dev-data.sh
-# ADD development-data.sql /usr
-# RUN chmod 755 /usr/development-data.sql
+# Add any step you want
