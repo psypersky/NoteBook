@@ -29,12 +29,11 @@ todo:
 - [x] Print postgresql connections => pgAdmin
 - [x] install k6 locally and test again to see if it performs better => yes but still not enough connections to db
 - [x] Create an even worse way to use psycopg
-- [x] Replicate Error
+- [x] Replicate load Error
 psycopg2.OperationalError
 psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for non-replication superuser connections
-- [ ] Load test the flask debug server
-- [ ] make something fail by excess load
-- [ ] make something more complex https://linuxconfig.org/random-word-generator
+- [ ] make k6 show a report of failed vs success
+- [ ] calculate an approximation of the performance of the server
 
 later:
 
