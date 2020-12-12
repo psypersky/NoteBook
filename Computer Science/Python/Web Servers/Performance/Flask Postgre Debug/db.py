@@ -26,3 +26,24 @@ def get_users():
         cursor.close()
         connection.close()
     return result
+
+class DataReader(object):
+    def __init__(self):
+        self.connection = psycopg2.connect(**SQL_CONFIG)
+        self.cursor = self.connection.cursor()
+
+    def get_users(self):
+        sql = 'SELECT * FROM users'
+        self.cursor.execute(sql)
+
+        try:
+            result = self.cursor.fetchall()
+        except psycopg2.ProgrammingError:
+            # no results of sql statement
+            result = None
+        return result
+
+    def close_connection(self):
+        self.connection.commit()
+        self.cursor.close()
+        self.connection.close()

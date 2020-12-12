@@ -6,9 +6,10 @@ docker-compose build --no-cache
 
 docker-compose up
 
-docker exec -it postgre-database-container bash
+docker-compose run database
+docker-compose run web-server
 
-psql -h localhost -p 5432 -U test_user test_database
+docker exec -it postgre-database-container bash
 
 git log --pretty=oneline
 git push origin f61b48cb8b1877721e2596a6aa65648a68bb605e:master 
@@ -25,7 +26,10 @@ todo:
 - [x] do something simple that involves reading from db and processing data
 - [x] Setup loadimpact/k6 in Docker
 - [x] Limit database and web-server cpu and memory in Docker
-- [ ] Replicate Error
+- [x] Print postgresql connections => pgAdmin
+- [x] install k6 locally and test again to see if it performs better => yes but still not enough connections to db
+- [x] Create an even worse way to use psycopg
+- [x] Replicate Error
 psycopg2.OperationalError
 psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for non-replication superuser connections
 - [ ] Load test the flask debug server

@@ -23,6 +23,8 @@ services:
         limits:
           cpus: '0.20'
           memory: 200M
+    networks: 
+      - server_net
 
   database:
     image: postgre-database-image
@@ -39,4 +41,8 @@ services:
         limits:
           cpus: '0.20'
           memory: 200M
+    networks: 
+      - server_net
 
+networks: 
+  server_net:
