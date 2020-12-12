@@ -18,6 +18,11 @@ services:
       # - .env
     stdin_open: true # Keep STDIN open even if not attached
     tty: true # Allocate a pseudo-tty
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 200M
 
   database:
     image: postgre-database-image
@@ -29,3 +34,9 @@ services:
       - ../database/.env
     ports:
       - "5432:5432" # specify port fordwarding
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 200M
+

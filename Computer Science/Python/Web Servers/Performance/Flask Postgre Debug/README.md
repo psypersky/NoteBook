@@ -23,8 +23,12 @@ todo:
 - [x] fix fixed-data step in database
 - [x] seed data in postgre
 - [x] do something simple that involves reading from db and processing data
-- [ ] Setup loadimpact/k6 in Docker
-- [ ] Load balance the flask debug server
+- [x] Setup loadimpact/k6 in Docker
+- [x] Limit database and web-server cpu and memory in Docker
+- [ ] Replicate Error
+psycopg2.OperationalError
+psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for non-replication superuser connections
+- [ ] Load test the flask debug server
 - [ ] make something fail by excess load
 - [ ] make something more complex https://linuxconfig.org/random-word-generator
 
