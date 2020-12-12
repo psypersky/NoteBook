@@ -1,10 +1,11 @@
 
-# ''.join([chr(ord(c) + 1) for c in 'abcd'])
 
-# functools.reduce(lambda acc, i: acc + chr(ord(i) + 1),'abcd', '')
 
 def encrypt_string(string_to_encrypt):
-    return ''.join(list(map(lambda c: chr(ord(c) + 1), string_to_encrypt)))
+    # ''.join(list(map(lambda c: chr(ord(c) + 1), string_to_encrypt)))
+    # functools.reduce(lambda acc, i: acc + chr(ord(i) + 1),'abcd', '')
+    # ''.join([chr(ord(c) + 1) for c in 'abcd'])
+    return ''.join(chr(ord(c) + 1) for c in string_to_encrypt)
 
 def encrypt_user(user_tupl):
   return (
