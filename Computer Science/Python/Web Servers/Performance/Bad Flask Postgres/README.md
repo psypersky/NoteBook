@@ -1,4 +1,6 @@
-# Python Web Servers Performance
+# Python Web Servers
+
+The worst way to create a Flask <-> psycopg app
 
 ```bash
 docker-compose build

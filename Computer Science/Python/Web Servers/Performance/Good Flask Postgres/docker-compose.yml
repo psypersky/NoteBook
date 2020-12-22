@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+
+  web-server: # name of the service
+    image: web-server-image # Name the build image with this name
+    container_name: web-server-container # the container will be accesible in the network by the same host name
+    build:
+      context: . # specify the directory of the Dockerfile
+      dockerfile: Dockerfile # the name of the Dockerfile
+    volumes:
+      - type: "bind" # bind the files on the host with the docker files, updates on host updates docker files too
+        source: . # Hosts source of mount
+        target: /usr/src/app # the path in the container where the volume will be mounted
+    ports:
+      - "3000:3000" # specify port forewarding
+    # env_file:
+      # - .env
+    stdin_open: true # Keep STDIN open even if not attached
+    tty: true # Allocate a pseudo-tty
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 200M
+    networks: 
+      - server_net
+
+  database:
+    image: postgre-database-image
+    container_name: postgre-database-container
+    build:
+      context: ../database
+      dockerfile: Dockerfile
+    env_file:
+      - ../database/.env
+    ports:
+      - "5432:5432" # specify port fordwarding
+    deploy:
+      resources:
+        limits:
+          cpus: '0.20'
+          memory: 200M
+    networks: 
+      - server_net
+
+networks: 
+  server_net:

@@ -1,8 +1,11 @@
 
 def encrypt_string(string_to_encrypt):
-    # ''.join(list(map(lambda c: chr(ord(c) + 1), string_to_encrypt)))
-    # functools.reduce(lambda acc, i: acc + chr(ord(i) + 1),'abcd', '')
-    # ''.join([chr(ord(c) + 1) for c in 'abcd'])
+    # BAD_PRACTICE: Some non pythonic ways of doing the same thing
+    # number 3 creates a list in memory instead of using a Generator Expression
+    #
+    # 1) ''.join(list(map(lambda c: chr(ord(c) + 1), string_to_encrypt)))
+    # 2) functools.reduce(lambda acc, i: acc + chr(ord(i) + 1),'abcd', '')
+    # 3) ''.join([chr(ord(c) + 1) for c in 'abcd'])
     return ''.join(chr(ord(c) + 1) for c in string_to_encrypt)
 
 def encrypt_user(user_tupl):
