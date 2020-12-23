@@ -1,5 +1,11 @@
 # Learning Plan
 
+## Python
+
+https://www.packtpub.com/product/mastering-concurrency-in-python/9781789343052
+
+https://opensource.com/article/17/4/grok-gil
+
 TODO
 
 SQL

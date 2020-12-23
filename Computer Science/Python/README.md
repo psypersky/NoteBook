@@ -2,6 +2,10 @@
 
 - [ ] Fluent Python
 
+- [ ] yield & generator functions
+- [x] with statement and context managers
+- [ ] Decorators
+
 ## Flask
 
 https://github.com/cookiecutter-flask/cookiecutter-flask
