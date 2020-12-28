@@ -14,8 +14,8 @@ services:
         target: /usr/src/app # the path in the container where the volume will be mounted
     ports:
       - "3000:3000" # specify port forewarding
-    # env_file:
-      # - .env
+    env_file:
+      - .env
     stdin_open: true # Keep STDIN open even if not attached
     tty: true # Allocate a pseudo-tty
     deploy:
@@ -23,26 +23,4 @@ services:
         limits:
           cpus: '0.20'
           memory: 200M
-    networks: 
-      - server_net
-
-  database:
-    image: postgre-database-image
-    container_name: postgre-database-container
-    build:
-      context: ../database
-      dockerfile: Dockerfile
-    env_file:
-      - ../database/.env
-    ports:
-      - "5432:5432" # specify port fordwarding
-    deploy:
-      resources:
-        limits:
-          cpus: '0.20'
-          memory: 200M
-    networks: 
-      - server_net
-
-networks: 
-  server_net:
+          # By default it joins the bridge network?

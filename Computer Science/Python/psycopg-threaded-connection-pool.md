@@ -6,4 +6,5 @@ You must known:
 
 - [x] iterators
 - [x] contexts & context managers
-- [ ] threads
+- [x] threads
+- [ ] How to share data between flask threads?
