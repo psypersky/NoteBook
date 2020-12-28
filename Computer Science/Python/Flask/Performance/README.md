@@ -1,4 +1,6 @@
-# Python Web Servers
+# Flask Postgre Performance
+
+How to create slow and fast APIs
 
 The worst way to create a Flask <-> psycopg app
 
@@ -49,7 +51,7 @@ psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for n
 - [x] learn threads in python
 - [x] implement threadedpool in pyscopg with Flask
 - [x] perf test the good flask with treadedpool => awesome perf
-- [ ] make k6 show a better performance report
+- [x] make k6 show the rate of failed requests
 - [ ] handle psycopg2.pool.PoolError: connection pool exhausted Errors
 return self._getconn(key)
 raise PoolError("connection pool exhausted")
