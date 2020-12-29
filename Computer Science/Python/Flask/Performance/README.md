@@ -55,11 +55,15 @@ psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for n
 - [x] use psycopg cursor_factory=psycopg2.extras.RealDictCursor
 - [x] return payload in JSON
 - [x] add response checks to load-test
-- [ ] handle psycopg2.pool.PoolError: connection pool exhausted Errors
+- [x] handle psycopg2.pool.PoolError: connection pool exhausted Errors
 return self._getconn(key)
-- [ ] add connection pool exhausted checks to load-test
+- [x] add connection pool exhausted checks to load-test
 raise PoolError("connection pool exhausted")
+- [ ] Make the api do optional memory heavy and cpu heavy things
+- [ ] Make experiments to avoid connection pool exhaustion
+- [ ] How to do load balancing if the bottle neck is the connection pool?
 - [ ] calculate an approximation of the performance of the server
+- [ ] asyncio
 
 later:
 
