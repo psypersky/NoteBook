@@ -10,10 +10,11 @@
     "db-start": "docker start -ai postgre-database-container",
     "good-flask-build": "docker build --tag web-server-image \"./Good Flask Postgres\"",
     "good-flask-build-no-cache": "docker build --no-cache --tag web-server-image \"./Good Flask Postgres\"",
+    "good-flask-re-build": "docker rm web-server-container || true && npm run good-flask-build-no-cache",
     "good-flask-run": "docker run -it -p 3000:3000 --name web-server-container -v \"$(pwd)/Good Flask Postgres:/usr/src/app\" --cpus 0.20 --memory 200M --network flask-perf-net web-server-image",
     "good-flask-start": "docker start -ai web-server-container",
     "perf-test-bad-flask": "k6 run --vus 1000 --iterations 1000 ./load-test/script.js",
-    "perf-test-good-flask": "k6 run --vus 10 --iterations 1000 ./load-test/script-good-flask.js"
+    "perf-test-good-flask": "k6 run --vus 1000 --iterations 1000 ./load-test/script-good-flask.js"
   },
   "author": "",
   "license": "ISC"
