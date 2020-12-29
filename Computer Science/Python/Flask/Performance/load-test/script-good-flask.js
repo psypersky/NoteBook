@@ -1,9 +1,10 @@
 import http from "k6/http";
+import { Rate } from "k6/metrics";
 
-export default function() {
-    const response = http.get("http://localhost:3000/users")
+const failedRequests = new Rate("failed_requests");
 
-    if (response.status !== 200) {
-        console.error(response.body)
-    }
+export default function () {
+  const response = http.get("http://localhost:3000/users");
+
+  failedRequests.add(response.status !== 200);
 }
