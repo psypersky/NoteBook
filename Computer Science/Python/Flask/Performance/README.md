@@ -52,12 +52,20 @@ psycopg2.OperationalError: FATAL:  remaining connection slots are reserved for n
 - [x] implement threadedpool in pyscopg with Flask
 - [x] perf test the good flask with treadedpool => awesome perf
 - [x] make k6 show the rate of failed requests
+- [x] use psycopg cursor_factory=psycopg2.extras.RealDictCursor
+- [x] return payload in JSON
+- [x] add response checks to load-test
 - [ ] handle psycopg2.pool.PoolError: connection pool exhausted Errors
 return self._getconn(key)
+- [ ] add connection pool exhausted checks to load-test
 raise PoolError("connection pool exhausted")
 - [ ] calculate an approximation of the performance of the server
 
 later:
+
+Pool doesn't keep connections open #563
+https://github.com/psycopg/psycopg2/issues/563
+https://www.psycopg.org/docs/pool.html
 
 - psycopg: For production use you are advised to use the source distribution. The binary packages come with their own versions of a few C libraries, among which libpq and libssl, which will be used regardless of other libraries available on the client: upgrading the system libraries will not upgrade the libraries used by psycopg2. Please build psycopg2 from source if you want to maintain binary upgradeability.
 
